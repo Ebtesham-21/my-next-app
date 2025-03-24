@@ -50,11 +50,11 @@ const About = (props) => {
 
                                 </div>
                                 <div className="funfact-item">
-                                <h3 className="text-4xl font-bold text-blue-600"><span>52</span>+</h3>
+                                <h3 className="text-4xl font-bold text-[#e5540a]"><span>52</span>+</h3>
                                 <p className="text-lg text-gray-600">Awards Win</p>
                                 </div>
                                 <div className="funfact-item">
-                                <h3 className="text-4xl font-bold text-blue-600"><span>2</span>M+</h3>
+                                <h3 className="text-4xl font-bold text-[#e5540a]"><span>2</span>M+</h3>
                                 <p className="text-lg text-gray-600">Happy Clients</p>
                                 </div>
 
