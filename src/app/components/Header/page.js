@@ -38,34 +38,34 @@ const Header = (props) => {
 
                 {/* Navbar Links */}
                 <div className='hidden lg:flex items-center space-x-6'>
-                    <ul className='flex space-x-6 text-gray-700 font-medium'>
+                    <ul className='flex space-x-6 text-[#f6f6f7] font-medium'>
                         <li>
-                            <Link to="home" smooth={true} duration={500} off={-100} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="home" smooth={true} duration={500} off={-100} className='hover:text-[#fa8853] cursor-pointer'>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
                                 About
                             </Link>
                         </li>
                         <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
                                 Service
                             </Link>
                         </li>
                         <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
                                 Portfolio
                             </Link>
                         </li>
                         <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
                                 Blog
                             </Link>
                         </li>
                         <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-blue-500 cursor-pointer'>
+                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
                                 Contact
                             </Link>
                         </li>
