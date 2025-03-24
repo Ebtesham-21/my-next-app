@@ -31,7 +31,7 @@ const Header = (props) => {
                 {/* logo */}
                 <div className='flex-shrink-0'>
                     <NavLink href="/" onClick={ClickHandler}>
-                        <Image src={Logo} alt="Logo" width={120} height={40}/>
+                        <Image src={Logo} alt="Logo" width={100} height={68}/>
                     </NavLink>
 
                 </div>
