@@ -1,3 +1,33 @@
+// tf about section
+
+.tf-about-section {
+    border-top: 1px solid $border-color;
+    position: relative;
+    overflow: hidden;
+
+    .tf-about-wrap {
+        .tf-about-img {
+            text-align: right;
+            margin-right: 30px;
+            position: relative;
+            max-width: 545px;
+            z-index: 1;
+
+            @media(max-width: 991px) {
+                text-align: left;
+            }
+
+            img {
+                filter: grayscale(1);
+            }
+
+            .tf-about-img-text {
+                
+            }
+        }
+    }
+}
+
 .digital-marque-sec {
     background: #000000; 
     padding: 40px 0;

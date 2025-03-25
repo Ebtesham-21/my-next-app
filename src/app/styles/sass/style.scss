@@ -1,2 +1,28 @@
 @import "helper/variables";
 @import "helper/functions";
+@import "helper/mixins";
+
+@import "base/base";
+
+// components
+@import "components/section-title";
+@import "components/buttons";
+@import "components/form";
+@import "components/social-links";
+@import "components/page-title";
+@import "components/preloader";
+@import "components/pagination";
+
+// layout
+@import "layout/header";
+@import "layout/hero";
+@import "layout/footer";
+
+// page
+@import "page/home-default";
+@import "page/service-single";
+@import "page/portfolio-single";
+@import "page/blog-single";
+
+
+
