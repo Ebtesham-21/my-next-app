@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Services from '@/app/api/service';
-import ServiceSingle from '../ServiceSingle';
+import ServiceSingle from '../ServiceSingle/page';
 
 const ServiceSection = (props) => {
     const [open, setOpen] = React.useState(false);

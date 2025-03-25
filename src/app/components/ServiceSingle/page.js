@@ -60,10 +60,22 @@ const ServiceSingle = ({maxWidth, open, onClose, title, dImg, sImg1, sImg2}) => 
                                 {Services.slice(0,3).map((service, srv) => (
                                     <div className='bg-gray-100 p-4 rounded-lg text-center' key={srv}>
                                         <i className={`fi ${service.icon} text-4xl text-blue-500 mb-2`}></i>
-                                        
+                                        <h2 className='text-lg font-semibold'>{service.sTitle}</h2>
+                                        <p className='text-gray-600'>Lacus, etiam sed est eu tempus need Temer diam congue.</p>
+
 
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                        <div className='bg-gray-50 p-6 rounded-lg text-center'>
+                            <h2 className='text-2xl font-semibold'>
+                                 Have project in mind? Let's discuss
+                            </h2>
+                            <p className="text-gray-600">Get in touch with us to see how we can help you with your project</p>
+                            <div className='mt-4'>
+                                <Contact/>
+
                             </div>
                         </div>
 
@@ -73,5 +85,6 @@ const ServiceSingle = ({maxWidth, open, onClose, title, dImg, sImg1, sImg2}) => 
 
             </Dialog>
         </Fragment>
-    )
+    );
 }
+export default ServiceSingle;
