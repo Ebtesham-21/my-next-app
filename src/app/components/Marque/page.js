@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const Marque = (props) => {
     return (
         <div className='digital-marque-sec'>
@@ -23,7 +25,7 @@ const Marque = (props) => {
             </div>
 
         </div>
-    )
-}
+    );
+};
 
-export default Marque;
+export default Marque
