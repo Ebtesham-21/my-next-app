@@ -16,12 +16,12 @@ const ServiceSection = (props) => {
     };
 
     return (
-        <div className="py-20">
+        <div className="py-20 bg-[#090909] ">
             <div className="container mx-auto px-6">
                 {/* Section Title */}
                 <div className="text-center mb-12">
                     <span className="text-lg text-blue-500">Check services</span>
-                    <h2 className="text-3xl font-semibold mt-2">My Best Services</h2>
+                    <h2 className="text-3xl text-white font-semibold mt-2">My Best Services</h2>
                 </div>
 
                 {/* Services List */}
