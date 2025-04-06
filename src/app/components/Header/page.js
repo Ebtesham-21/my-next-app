@@ -30,14 +30,18 @@ const Header = (props) => {
 
                 {/* logo */}
                 <div className='flex-shrink-0'>
-                    <NavLink href="/" onClick={ClickHandler}>
-                        <Image src={Logo} alt="Logo" width={100} height={68}/>
-                    </NavLink>
+                    <div className='navbar-header'>
+                        <NavLink href="/" onClick={ClickHandler}>
+                            <Image src={Logo} alt="Logo" width={100} height={68}/>
+                        </NavLink>
+
+                    </div>
+                 
 
                 </div>
 
                 {/* Navbar Links */}
-                <div className='hidden lg:flex items-center space-x-6'>
+                <div className=' lg:flex items-center space-x-6'>
                     <ul className='flex space-x-6 text-[#f6f6f7] font-medium'>
                         <li>
                             <Link to="home" smooth={true} duration={500} off={-100} className='hover:text-[#fa8853] cursor-pointer'>
@@ -77,7 +81,7 @@ const Header = (props) => {
                 {/* Search and cart */}
                 <div className='flex items-center space-x-4'>
                     {/* search toggle button */}
-                    <button onClick={() => setSearchOpen(!searchOpen)} className='text-gray-700 focus:outline-none'>
+                    <button onClick={() => setSearchOpen(!searchOpen)} className='text-white focus:outline-none'>
                         <i className={`ti ${searchOpen ? "ti-close": "ti-search"}`}></i>
 
                     </button>
