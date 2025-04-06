@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import Image from "next/image";
 import himg from "/public/images/slider/asset 1.webp";
-import styles from '../../styles/sass/page/_home-default.module.scss';
+
 
 const Hero = () => {
   return (
