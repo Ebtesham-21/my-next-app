@@ -16,36 +16,45 @@ const ServiceSection = (props) => {
     };
 
     return (
-        <div className="py-20 bg-[#090909] ">
-            <div className="container mx-auto px-6">
+        <div className=" tp-service-area mt-6 pt-6 ">
+            <div className="container mx-auto ">
                 {/* Section Title */}
-                <div className="text-center mb-12">
+                <div className=" tp-section-title">
                     <span className="text-lg text-blue-500">Check services</span>
                     <h2 className="text-3xl text-white font-semibold mt-2">My Best Services</h2>
                 </div>
 
                 {/* Services List */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="tp-service-wrap ">
+                    <div className='row align-items-center'>
                     {Services.slice(0, 4).map((service, srv) => (
-                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg" key={srv}>
-                            <i className={`fi ${service.icon} text-4xl text-blue-500 mb-4`}></i>
-                            <h2
-                                className="text-xl font-semibold text-gray-800 cursor-pointer hover:text-blue-500"
-                                onClick={() => handleClickOpen(service)}
-                            >
-                                {service.sTitle}
-                            </h2>
-                            <p className="text-gray-600 mt-2">
-                                A wonderful serenity has taken possession of my entire soul, like these sweet mornings.
-                            </p>
-                            <button
-                                className="mt-4 text-blue-500 flex items-center"
-                                onClick={() => handleClickOpen(service)}
-                            >
-                                <i className="fi flaticon-right-arrow mr-2"></i> Read More
-                            </button>
+                        <div className="flex flex-col items-center  p-6 rounded-lg shadow-lg" key={srv}>
+                            <div className='tp-service-item'>
+                                <i className={`fi ${service.icon} text-4xl text-blue-500 mb-4`}></i>
+                                <h2
+                                    className="text-xl font-semibold text-white cursor-pointer hover:text-blue-500"
+                                    onClick={() => handleClickOpen(service)}
+                                >
+                                    {service.sTitle}
+                                </h2>
+                                <p className="text-white mt-2">
+                                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings.
+                                </p>
+                                <button
+                                    className="mt-4 text-blue-500 flex items-center"
+                                    onClick={() => handleClickOpen(service)}
+                                >
+                                    <i className="fi flaticon-right-arrow mr-2"></i> Read More
+                                </button>
+
+
+                            </div>
+                           
                         </div>
                     ))}
+
+                    </div>
+                    
                 </div>
             </div>
 

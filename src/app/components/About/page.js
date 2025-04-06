@@ -37,11 +37,11 @@ const About = (props) => {
                             <h2 className='text-3xl font-semibold mt-4 mb-2'>
                                 Welcome to Tonu, Best Software Services
                             </h2>
-                            <h5 className='text-xl text-gray-700 mb-4 '>
+                            <h5 className='text-xl text-white mb-4 '>
                              I have 8+ years of experience in Software Development to give you better services.
 
                             </h5>
-                            <p className='text-gray-600 mb-6'>
+                            <p className='text-white mb-6'>
                                  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence. 
                             </p>
 
@@ -50,17 +50,17 @@ const About = (props) => {
                             <div className=' tf-funfact'>
                                 <div className='tf-funfact-item'>
                                     <h3 className='text-4xl font-bold text-[#e5540a] '><span>500</span>+</h3>
-                                    <p className="text-lg text-gray-600">Projects Completed</p>
+                                    <p className="text-lg text-white">Projects Completed</p>
 
 
                                 </div>
                                 <div className="tf-funfact-item">
                                 <h3 className="text-4xl font-bold text-[#e5540a]"><span>52</span>+</h3>
-                                <p className="text-lg text-gray-600">Awards Win</p>
+                                <p className="text-lg text-white">Awards Win</p>
                                 </div>
                                 <div className="tf-funfact-item">
                                 <h3 className="text-4xl font-bold text-[#e5540a]"><span>2</span>M+</h3>
-                                <p className="text-lg text-gray-600">Happy Clients</p>
+                                <p className="text-lg text-white">Happy Clients</p>
                                 </div>
 
                             </div>
