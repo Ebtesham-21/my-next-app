@@ -7,6 +7,7 @@ import { Element } from "react-scroll";
 import Hero from "./components/Hero/page"; 
 import ServiceSection from "./components/ServiceSection/page";
 import Marque from "./components/Marque/page";
+import ProjectSection from "./components/ProjectSection/page";
 // import '@/app/styles/sass/page/_home-default.scss';
 
 export default function Home() {
@@ -27,6 +28,9 @@ export default function Home() {
       </Element>
       <Element name="servicesection">
         <Marque />
+      </Element>
+      <Element name="projectsection">
+        <ProjectSection />
       </Element>
     </main>
   );
