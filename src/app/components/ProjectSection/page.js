@@ -23,14 +23,14 @@ const ProjectSection = (props) => {
     }
 
     return (
-        <section className="tp-project-section p-6">
+        <section className="tp-project-section  p-12">
             <div className="container">
-                <div className="tp-section-title">
+                <div className="tp-section-title p-6">
                     <span>Projects</span>
                     <h2>My Latest Project</h2>
                 </div>
 
-                <div className="tp-project-wrap ">
+                <div className="tp-project-wrap   ">
                     {/* Tailwind grid system for the project items */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                         {Projects.slice(0, number).map((project, pro) => (
@@ -38,7 +38,7 @@ const ProjectSection = (props) => {
                                 <div className="tp-project-img" onClick={() => handleClickOpen(project)}>
                                     <Image src={project.pImg} alt="" layout="responsive" />
                                 </div>
-                                <div className="tp-project-content">
+                                <div className="tp-project-content ">
                                     <span>{project.subTitle}</span>
                                     <h2 onClick={() => handleClickOpen(project)}>{project.title}</h2>
                                 </div>
