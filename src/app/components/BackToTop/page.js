@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const BackToTop = () => {
     return (
-        <div className='lg:w-12'>
+        <div className='fixed bottom-6 right-6 z-50' >
             <div className='header-menu'>
                 <ul className='smoothscroll'>
                     <li>

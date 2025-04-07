@@ -9,6 +9,7 @@ import ServiceSection from "./components/ServiceSection/page";
 import Marque from "./components/Marque/page";
 import ProjectSection from "./components/ProjectSection/page";
 import BackToTop from "./components/BackToTop/page";
+import Testimonial from './components/Testimonial/page';
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <Element name="projectsection">
         <ProjectSection />
       </Element>
+      <Testimonial/>
       </div>
       <BackToTop/>
 
