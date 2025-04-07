@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Projects from '../../api/project';
+import Projects from '../../../api/project'
 
 const RelatedProject = () => {
     return (

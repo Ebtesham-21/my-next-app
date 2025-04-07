@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {Dialog, Grid,} from '@mui/material';
 import Contact from '../Contact/Page';
-import RelatedProject from './Related/page';
+import RelatedProject from '../Related/page';
 import Image from 'next/image';
 
 

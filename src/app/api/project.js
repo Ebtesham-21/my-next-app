@@ -1,4 +1,21 @@
-[
+import pimg1 from '/public/images/project/img-1.jpg'
+import pimg2 from '/public/images/project/img-2.jpg'
+import pimg3 from '/public/images/project/img-3.jpg'
+import pimg4 from '/public/images/project/img-4.jpg'
+import pimg5 from '/public/images/project/img-5.jpg'
+import pimg6 from '/public/images/project/img-6.jpg'
+
+import ps1img1 from '/public/images/project-single/1.jpg'
+import ps1img2 from '/public/images/project-single/4.jpg'
+import ps1img3 from '/public/images/project-single/5.jpg'
+import ps1img4 from '/public/images/project-single/6.jpg'
+import ps1img5 from '/public/images/project-single/7.jpg'
+import ps1img6 from '/public/images/project-single/8.jpg'
+
+import psub1img1 from '/public/images/project-single/2.jpg'
+import psub1img2 from '/public/images/project-single/3.jpg'
+
+const Projects =[
     {
        Id:'1',
        pImg:pimg1,
