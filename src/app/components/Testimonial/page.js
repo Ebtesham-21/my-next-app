@@ -78,7 +78,7 @@ const Testimonial = () => {
     
 
     return (
-        <section className="tp-testimonial-section section-padding">
+        <section className="tp-testimonial-section section-padding container mx-auto">
             <div className="container">
                 <div className="tp-section-title">
                     <span>Testimonials</span>

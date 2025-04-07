@@ -38,7 +38,7 @@ const Contact = () => {
     };
 
     return (
-        <form onSubmit={submitHandler} className='space-y-6 bg-white p-6 rounded-lg shadow-lg'>
+        <form onSubmit={submitHandler} className='space-y-6  p-6 rounded-lg shadow-lg'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div>
                     <input

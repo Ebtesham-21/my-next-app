@@ -4,7 +4,7 @@ import React from 'react';
 
 const Marque = (props) => {
     return (
-        <div className='digital-marque-sec'>
+        <div className='digital-marque-sec container mx-auto my-6'>
             <div className='container'>
                 <div className='digital-marque'>
                     <div className='marque'>
