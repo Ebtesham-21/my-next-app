@@ -131,7 +131,53 @@ const ProjectSingle = ({maxWidth, open, onClose, title, pImg, psub1img1, psub1im
                                                     </div>
 
                                                 </div>
-                                                <div className=''>
+                                                <div className='tp-project-single-item list-widget'>
+                                                    <div className='flex flex-wrap'>
+                                                        <div className='w-full lg:w-6/12'>
+                                                            <div className='tp-project-single-title'>
+                                                                <h3>Resieved goals</h3>
+
+                                                            </div>
+                                                            <ul>
+                                                                <li>Non saed velit dictum quam risus pharetra esta.</li>
+                                                                <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
+                                                                <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
+                                                                <li>Massa volutpat odio facilisis purus sit elementum.</li>
+                                                            </ul>
+
+
+                                                        </div>
+                                                        <div className='w-full lg:w-6/12 list-widget-s'>
+                                                            <div className='tp-project-single-title'>
+                                                                <h3>Results</h3>
+
+                                                            </div>
+                                                            <ul>
+                                                                <li>Mauris dignissim blandit cursus imperdiet accumsan lorem.</li>
+                                                                <li>Nam id in non sed cras purus nunc et.</li>
+                                                                <li>Mauris orci, cursus nisl odio est adipiscing gravida magna eget.</li>
+                                                                <li>Quis mauris vel felis convallis nulla dignissim.</li>
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <RelatedProject/>
+                                                <div className='tp-project-single-item'>
+                                                    <div className='tp-project-contact-area'>
+                                                        <div className='tp-contact-title'>
+                                                            <h2>Have project in mind? Let's discuss</h2>
+                                                            <p>Get in touch with us to see how we can help you with your project</p>
+
+                                                        </div>
+                                                        <div className='tp-contact-form-area'>
+                                                            <Contact/>
+
+                                                        </div>
+
+                                                    </div>
 
                                                 </div>
 
@@ -153,5 +199,7 @@ const ProjectSingle = ({maxWidth, open, onClose, title, pImg, psub1img1, psub1im
 
             </Dialog>
         </>
-    )
+    );
 }
+
+export default ProjectSingle;
