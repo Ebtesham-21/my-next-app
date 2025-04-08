@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import Navbar from "./components/Navbar/page"; 
 import About from "./components/About/page"; 
 import { Element } from "react-scroll";
@@ -11,6 +11,7 @@ import ProjectSection from "./components/ProjectSection/page";
 import BackToTop from "./components/BackToTop/page";
 import Testimonial from './components/Testimonial/page';
 import Blog from './components/BlogSection/page';
+import ContactArea from './components/ContactArea/page';
 
 export default function Home() {
   return (
@@ -38,9 +39,12 @@ export default function Home() {
       </Element>
 
       <Testimonial/>
-      
+
       <Element name="blog">
         <Blog/>
+      </Element>
+      <Element name='contact'>
+        <ContactArea/>
       </Element>
 
   

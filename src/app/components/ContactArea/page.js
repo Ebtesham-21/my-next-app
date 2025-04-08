@@ -1,9 +1,10 @@
 import React from 'react'
-import ContactForm from ''
+import ContactForm from '../ContactFrom/page'
 
 const ContactArea = (props) => {
     return (
-        <section className='tp-contact-form-area section-padding'>
+    <section className='container mx-auto'>
+        <div className='tp-contact-form-area section-padding'>
             <div className='container'>
                 <div className='tp-contact-form-wrap'>
                     <div className='tp-section-title'>
@@ -21,7 +22,8 @@ const ContactArea = (props) => {
 
             </div>
 
-        </section>
+        </div>
+    </section>
     )
 }
 
