@@ -73,9 +73,9 @@ const MobileMenu = () => {
 
             <div className='showmenu' onClick={() => setMenuState(!menuActive)}>
                 <button type="button" className='navbar-toggler open-btn'>
-                    <span className="block w-6 h-0.5 bg-white mb-1 transform rotate-45"></span>
-                    <span className="block w-6 h-0.5 bg-white mb-1"></span>
-                    <span className="block w-6 h-0.5 bg-white transform -rotate-45"></span>
+                    <span className="icon-bar first-angle"></span>
+                    <span className="icon-bar middle-angle"></span>
+                    <span className="icon-bar last-angle"></span>
                 </button>
 
             </div>

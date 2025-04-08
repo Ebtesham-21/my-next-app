@@ -5,18 +5,19 @@ import Image from 'next/image'
 
 const Footer = (props) => {
     return(
-        <div className='tp-site-footer text-center'>
-            <div className='container'>
+    <section className='container mx-auto bg-black'>  
+        <div className='tp-site-footer text-center  '>
+            <div className='container '>
                 <div className='flex flex-wrap'>
                     <div className='w-full'>
-                        <div className='footer-image'>
-                            <Link className='logo' href="/"><Image src={logo} alt=""/></Link>
+                        <div className='footer-image  flex justify-center'>
+                            <Link className='logo' href="/"><Image src={Logo} alt=""/></Link>
 
                         </div>
 
 
                     </div>
-                    <div className='flex flex-wrap'>
+                    <div className='w-full'>
                         <div className='link-widget'>
                             <ul>
                                 <li><Link href="/"><i className="ti-facebook"></i></Link></li>
@@ -44,6 +45,7 @@ const Footer = (props) => {
             </div>
 
         </div>
+        </section>  
     )
 }
 

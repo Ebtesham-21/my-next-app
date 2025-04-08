@@ -12,6 +12,7 @@ import BackToTop from "./components/BackToTop/page";
 import Testimonial from './components/Testimonial/page';
 import Blog from './components/BlogSection/page';
 import ContactArea from './components/ContactArea/page';
+import Footer from './components/Footer/page';
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
   
       </div>
       <BackToTop/>
+      <Footer/>
 
     </main>
   );

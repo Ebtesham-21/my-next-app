@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-scroll';
 import MobileMenu from "../MobileMenu/page"; 
 import Logo from '/public/images/logo.png';
@@ -8,7 +8,7 @@ import NavLink from 'next/link';
 
 const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
-    const [searchOpen, setSearchOpen] = useState(false);
+   
 
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -19,101 +19,71 @@ const Header = (props) => {
     }
 
     return (
-        <header id="header" className={`w-full fixed top-0 z-50 bg-[#090909] shadow ${props.topbarNone}`}>
-        <div className={`tp-site-header ${props.hclass}`}>
-            <nav className='w-full flex items-center justify-between px-6 py-4'>
-                {/* mobile menu button */}
-                <div className='lg:hidden'>
-                    <MobileMenu/>
+        <header id="header" className={props.topbarNone}>
+            <div className={`tp-site-header ${props.hclass}`}>
+                <nav className="navigation">
+                    <div className="container-fluid">
+                        <div className="flex items-center">
+                            {/* Mobile Menu */}
+                            <div className="lg:hidden block w-1/4 md:w-1/4">
+                                <div className="mobail-menu">
+                                    <MobileMenu />
+                                </div>
+                            </div>
 
-                </div>
+                            {/* Logo Section */}
+                            <div className="lg:w-3/12 md:w-6/12 w-6/12">
+                                <div className="navbar-header">
+                                    <NavLink onClick={ClickHandler} className="navbar-brand" href="/">
+                                        <Image src={Logo} alt="" />
+                                    </NavLink>
+                                </div>
+                            </div>
 
-                {/* logo */}
-                <div className='flex-shrink-0'>
-                    <div className='navbar-header'>
-                        <NavLink href="/" onClick={ClickHandler}>
-                            <Image src={Logo} alt="Logo" width={100} height={68}/>
-                        </NavLink>
+                            {/* Navbar Links */}
+                            <div className="lg:w-6/12 md:w-1/12 w-1/12">
+                                <div id="navbar" className="collapse navbar-collapse navigation-holder">
+                                    <button className="menu-close"><i className="ti-close"></i></button>
+                                    <ul className="flex flex-col lg:flex-row mb-2 mb-lg-0">
+                                        <li><Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-100}>Home</Link></li>
+                                        <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={500} offset={-95}>About</Link></li>
+                                        <li><Link activeClass="active" to="service" spy={true} smooth={true} duration={500} offset={-95}>Service</Link></li>
+                                        <li><Link activeClass="active" to="project" spy={true} smooth={true} duration={500} offset={-95}>Portfolio</Link></li>
+                                        <li><Link activeClass="active" to="blog" spy={true} smooth={true} duration={500} offset={-95}>Blog</Link></li>
+                                        <li><Link activeClass="active" to="contact" spy={true} smooth={true} duration={500} offset={-95}>Contact</Link></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                    </div>
-                 
-
-                </div>
-
-                {/* Navbar Links */}
-                <div className=' lg:flex items-center space-x-6'>
-                    <ul className='flex space-x-6 text-[#f6f6f7] font-medium'>
-                        <li>
-                            <Link to="home" smooth={true} duration={500} off={-100} className='hover:text-[#fa8853] cursor-pointer'>
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
-                                About
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
-                                Service
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
-                                Portfolio
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
-                                Blog
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="about" smooth={true} duration={500} offset={-95} className='hover:text-[#fa8853] cursor-pointer'>
-                                Contact
-                            </Link>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                {/* Search and cart */}
-                <div className='flex items-center space-x-4'>
-                    {/* search toggle button */}
-                    <button onClick={() => setSearchOpen(!searchOpen)} className='text-white focus:outline-none'>
-                        <i className={`ti ${searchOpen ? "ti-close": "ti-search"}`}></i>
-
-                    </button>
-
-                    {/* search input */}
-                    {searchOpen && (
-                        <div className='absolute top-16 right-6 bg-white shadow-lg p-3 rounded-md'>
-                            <form onSubmit={SubmitHandler} className='flex items-center border border-gray-300 rounded-md overflow-hidden'>
-                                <input
-                                    type="text"
-                                    placeholder='Search here...'
-                                    className='px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none '
-
-                                />
-
-                                <button type="submit" className='px-3 bg-blue-500 text-white'>
-                                    <i className='fi ti-search'></i>
-                                </button>
-                                
-                                
-                            </form>
+                            {/* Search Section */}
+                            <div className="lg:w-3/12 md:w-2/12 w-2/12">
+                                <div className="header-right" id="home">
+                                    <div className="header-search-form-wrapper">
+                                        <div className="cart-search-contact">
+                                            <button className="search-toggle-btn" onClick={() => setMenuState(!menuActive)}>
+                                                <i className={`ti-search ${menuActive ? "ti-close" : "ti-search"}`}></i>
+                                            </button>
+                                            <div className={`header-search-form ${menuActive ? "header-search-content-toggle" : ""}`}>
+                                                <form onSubmit={SubmitHandler}>
+                                                    <div>
+                                                        <input type="text" className="form-control" placeholder="Search here..." />
+                                                        <button type="submit">
+                                                            <i className="fi ti-search"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-                    )}
-
-                </div>
-
-            </nav>
-        </div>
-
-   </header>
-    );
-};
+                    </div>
+                </nav>
+            </div>
+        </header>
+    )
+}
 
 export default Header;
