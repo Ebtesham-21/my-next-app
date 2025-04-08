@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import blogs from '../../api/blogs';
-import BlogSingle from '../BlogSingle';
+import BlogSingle from '../BlogSingle/page';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -25,7 +25,8 @@ const BlogSection = () => {
     const [buttonActive, setButtonState] = useState(false);
 
     return (
-        <section className='tp-blog-section section-padding' id="blog">
+    <section className='container mx-auto'>
+        <div className='tp-blog-section section-padding' id="blog">
             <div className='container'>
                 <div className='tp-section-title'>
                     <span>Latest Blog</span>
@@ -78,7 +79,8 @@ const BlogSection = () => {
             author={state.author} comment={state.comment}
             />
 
-        </section>
+        </div>
+    </section>
     );
     
 }

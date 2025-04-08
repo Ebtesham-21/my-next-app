@@ -10,6 +10,7 @@ import Marque from "./components/Marque/page";
 import ProjectSection from "./components/ProjectSection/page";
 import BackToTop from "./components/BackToTop/page";
 import Testimonial from './components/Testimonial/page';
+import Blog from './components/BlogSection/page';
 
 export default function Home() {
   return (
@@ -26,16 +27,23 @@ export default function Home() {
       <Element name="about">
         <About />
       </Element>
-      <Element name="servicesection">
+      <Element name="service">
         <ServiceSection />
       </Element>
-      <Element name="servicesection">
+      
         <Marque />
-      </Element>
-      <Element name="projectsection">
+      
+      <Element name="portfolio">
         <ProjectSection />
       </Element>
+
       <Testimonial/>
+      
+      <Element name="blog">
+        <Blog/>
+      </Element>
+
+  
       </div>
       <BackToTop/>
 

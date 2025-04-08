@@ -115,22 +115,161 @@ const BlogSingle = ({maxWidth, open, onClose, title, bImg, create_at, author, co
                                                 </Link>
 
                                             </div>
+                                            <div className="next-post">
+                                                <Link href="/">
+                                                    <span className="post-control-link">Next Post</span>
+                                                    <span className="post-name">Dignissimos ducimus qui blanditiis praesentiu deleniti atque corrupti quos dolores</span>
+                                                </Link>
+
+                                            </div>
 
                                         </div>
+                                        <div className="comments-area">
+                                            <div className="comments-section">
+                                                <h3 className="comments-title">Comments</h3>
+                                                <ol className="comments">
+                                                    <li className="comment even thread-even depth-1" id="comment-1">
+                                                        <div id="div-comment-1">
+                                                            <div className="comment-theme">
+                                                                <div className="comment-image">
+                                                                    <Image src={blog3} alt=""/>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div className="comment-main-area">
+                                                                <div className="comment-wrapper">
+                                                                    <div className="comments-meta">
+                                                                        <h4>John Abraham <span className="comments-date">January 12,2023
+                                                                        At 9.00am</span></h4>
+
+                                                                    </div>
+                                                                    <div className="comment-area">
+                                                                        <p>I will give you a complete account of the system, and
+                                                                                expound the actual teachings of the great explorer of
+                                                                                the truth, </p>
+                                                                            <div className="comments-reply">
+                                                                                <Link className="comment-reply-link" href="/"><span>Reply</span></Link>
+                                                                            </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div> 
+                                                        <ul className="children">
+                                                            <li className="comment">
+                                                                <div>
+                                                                    <div className="comment-theme">
+                                                                        <div className="comment-image">
+                                                                             <Image src={blog4} alt="" />
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div className="comment-main-area">
+                                                                        <div className="comment-wrapper">
+                                                                            <div className="comments-meta">
+                                                                                 <h4>Lily Watson <span className="comments-date">January
+                                                                                 12,2023 At 9.00am</span>
+                                                                                 </h4>
+
+                                                                            </div>
+                                                                            <div className="comment-area">
+                                                                                <p>I will give you a complete account of the system,
+                                                                                        and expound the actual teachings of the great
+                                                                                        explorer of the truth, </p>
+                                                                                    <div className="comments-reply">
+                                                                                        <Link className="comment-reply-link" href="/"><span>Reply</span></Link>
+                                                                                    </div>
+
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <ul>
+                                                                    <li className="comment">
+                                                                        <div>
+                                                                            <div className="comment-theme">
+                                                                                <div className="comment-image"><Image src={blog5} alt="" /></div>
+                                                                            </div>
+                                                                            <div className="comment-main-area">
+                                                                                <div className="comment-wrapper">
+                                                                                    <div className="comments-meta">
+                                                                                        <h4>John Abraham <span className="comments-date">January
+                                                                                            12,2023 At 9.00am</span></h4>
+                                                                                    </div>
+                                                                                    <div className="comment-area">
+                                                                                        <p>I will give you a complete account of the
+                                                                                            system, and expound the actual teachings
+                                                                                            of the great explorer of the truth, </p>
+                                                                                        <div className="comments-reply">
+                                                                                            <Link className="comment-reply-link" href="/"><span>Reply</span></Link>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li className="comment">
+                                                        <div>
+                                                            <div className="comment-theme">
+                                                                <div className="comment-image"><Image src={blog3} alt="" /></div>
+                                                            </div>
+                                                            <div className="comment-main-area">
+                                                                <div className="comment-wrapper">
+                                                                    <div className="comments-meta">
+                                                                        <h4>John Abraham <span className="comments-date">January 12,2023
+                                                                            At 9.00am</span></h4>
+                                                                    </div>
+                                                                    <div className="comment-area">
+                                                                        <p>I will give you a complete account of the system, and
+                                                                            expound the actual teachings of the great explorer of
+                                                                            the truth, </p>
+                                                                        <div className="comments-reply">
+                                                                            <Link className="comment-reply-link" href="/"><span>Reply</span></Link>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                            <div className="comment-respond">
+                                                <h3 className="comment-reply-title">Post Comments</h3>
+                                                <form onSubmit={submitHandler} id="commentform" className="comment-form">
+                                                    <div className="form-textarea">
+                                                        <textarea id="comment" placeholder="Write Your Comments..."></textarea>
+                                                    </div>
+                                                    <div className="form-inputs">
+                                                        <input placeholder="Website" type="url" />
+                                                        <input placeholder="Name" type="text" />
+                                                        <input placeholder="Email" type="email" />
+                                                    </div>
+                                                    <div className="form-submit">
+                                                        <input id="submit" value="Post Comment" type="submit" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </section>
-
                 </Grid>
-
-
             </Dialog>
         </>
-    )
+    );
 }
+export default BlogSingle
