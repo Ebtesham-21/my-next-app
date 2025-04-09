@@ -16,7 +16,7 @@ const ServiceSection = (props) => {
     };
 
     return (
-        <div className=" tp-service-area mt-6 pt-6 ">
+        <div className=" tp-service-area mt-6 pt-16 ">
             <div className="container mx-auto ">
                 {/* Section Title */}
                 <div className=" tp-section-title">

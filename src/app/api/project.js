@@ -22,8 +22,8 @@ const Projects =[
        ps1img:ps1img1,
        psub1img1:psub1img1,
        psub1img2:psub1img2,
-       title:'Business Website Design',  
-       subTitle:'Web Design',   
+       title:'Business Brand Design',  
+       subTitle:' Design',   
     },
     {
        Id:'2',
@@ -31,8 +31,8 @@ const Projects =[
        ps1img:ps1img2,
        psub1img1:psub1img1,
        psub1img2:psub1img2,
-       title:'Food Website Design', 
-       subTitle:'Web Development',    
+       title:'Food Brand Design', 
+       subTitle:' Design',    
     },
     {
       Id:'3',
@@ -40,7 +40,7 @@ const Projects =[
       ps1img:ps1img3,
       psub1img1:psub1img1,
       psub1img2:psub1img2,
-      title:'Creative Website Design',  
+      title:'Creative Brand Design',  
       subTitle:'Web Design',   
    },
    {

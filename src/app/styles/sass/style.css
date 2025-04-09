@@ -1934,7 +1934,7 @@ img {
   font-size: 15px;
   overflow: hidden;
   padding: 80px 0;
-  background: #713735;
+  background:rgb(0, 0, 0);
 }
 
 @media (max-width: 991px) {

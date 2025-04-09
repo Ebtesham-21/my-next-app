@@ -14,7 +14,7 @@ const Hero = () => {
                 <div className="w-7/12 lg:w-7/12">
                     <div className="tp-hero-section-text">
                         <div className="tp-hero-title">
-                            <h2>App & Software Developer</h2>
+                            <h2>Creative Person Portfolio</h2>
 
                         </div>
                         <div className="tp-hero-sub">
@@ -47,7 +47,7 @@ const Hero = () => {
 
             </div>
             <div className="visible-text">
-                <h1>Developer</h1>
+                <h1>Creative</h1>
 
             </div>
 

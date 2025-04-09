@@ -76,7 +76,7 @@ const About = (props) => {
 
         {/* visible text section */}
             <div className="visible-rotate-text">
-                <h1>About Me</h1>
+                <h1>Designer</h1>
             </div>
         </section>
     );
