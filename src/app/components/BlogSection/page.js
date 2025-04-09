@@ -60,9 +60,13 @@ const BlogSection = () => {
                     
 
                     </div>
-                    <div className={`sec-title-btn text-center mt-3 ${buttonActive ? "d-none": ""}`}>
+                    <div className={`sec-title-btn text-center mt-3 ${buttonActive ? "hidden": ""}`}>
                         <span onClick={() => setButtonState(!buttonActive)}>
-                            <button className='theme-btn' onClick={() => setCount(number + number)}>
+                            <button className='theme-btn'  onClick={() => {
+                                setCount(number + number);
+                                setButtonState(true); // hide the button
+                            }}
+                            >
                                 View All Blog
                             </button>
                         </span>

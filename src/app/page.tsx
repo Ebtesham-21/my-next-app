@@ -35,7 +35,7 @@ export default function Home() {
       
         <Marque />
       
-      <Element name="portfolio">
+      <Element name="project">
         <ProjectSection />
       </Element>
 

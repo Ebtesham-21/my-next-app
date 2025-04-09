@@ -45,9 +45,12 @@ const ProjectSection = (props) => {
                             </div>
                         ))}
                     </div>
-                    <div className={`project-btn ${buttonActive ? "d-none" : ""}`}>
+                    <div className={`project-btn ${buttonActive ? "hidden" : ""}`}>
                         <span onClick={() => setButtonState(!buttonActive)}>
-                            <button className="theme-btn" onClick={() => setCount(number + number)}>View all work</button>
+                            <button className="theme-btn"  onClick={() => {
+                                    setCount(number + number);
+                                    setButtonState(true); // hide the button
+                            }}>View all work</button>
                         </span>
                     </div>
                 </div>
