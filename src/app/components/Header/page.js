@@ -41,10 +41,11 @@ const Header = (props) => {
                             </div>
 
                             {/* Navbar Links */}
-                            <div className="lg:w-6/12 md:w-1/12 w-1/12">
-                                <div id="navbar" className="collapse navbar-collapse navigation-holder">
-                                    <button className="menu-close"><i className="ti-close"></i></button>
-                                    <ul className="flex flex-col lg:flex-row mb-2 mb-lg-0">
+                            
+                            <div className="lg:w-6/12 md:w-full w-full flex justify-center items-center ">
+                                <div id="navbar" className=" navigation-holder  ">
+                                    <button className="menu-close lg:hidden block p-3"><i className="ti-close"></i></button>
+                                    <ul className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start  lg:items-center">
                                         <li><Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-100}>Home</Link></li>
                                         <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={500} offset={-95}>About</Link></li>
                                         <li><Link activeClass="active" to="service" spy={true} smooth={true} duration={500} offset={-95}>Service</Link></li>
