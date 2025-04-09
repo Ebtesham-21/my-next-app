@@ -32,7 +32,7 @@ const Header = (props) => {
                             </div>
 
                             {/* Logo Section */}
-                            <div className="lg:w-3/12 md:w-6/12 w-6/12">
+                            <div className="lg:w-3/12 md:w-6/12 w-6/12 px-6">
                                 <div className="navbar-header">
                                     <NavLink onClick={ClickHandler} className="navbar-brand" href="/">
                                         <Image src={Logo} alt="" />
@@ -57,7 +57,7 @@ const Header = (props) => {
                             </div>
 
                             {/* Search Section */}
-                            <div className="lg:w-3/12 md:w-2/12 w-2/12">
+                            <div className="lg:w-3/12 md:w-2/12 w-2/12 px-6">
                                 <div className="header-right" id="home">
                                     <div className="header-search-form-wrapper">
                                         <div className="cart-search-contact">
@@ -69,7 +69,7 @@ const Header = (props) => {
                                                     <div>
                                                         <input type="text" className="form-control" placeholder="Search here..." />
                                                         <button type="submit">
-                                                            <i className="fi ti-search"></i>
+                                                            <i className="fi ti-search "></i>
                                                         </button>
                                                     </div>
                                                 </form>
