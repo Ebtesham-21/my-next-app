@@ -44,7 +44,7 @@ const Header = (props) => {
                             
                             <div className="lg:w-6/12 md:w-full w-full flex justify-center items-center ">
                                 <div id="navbar" className=" navigation-holder  ">
-                                    <button className="menu-close lg:hidden block p-3"><i className="ti-close"></i></button>
+                                    <button className="menu-close lg:hidden block  "><i className=" mx-10  "></i></button>
                                     <ul className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start  lg:items-center">
                                         <li><Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-100}>Home</Link></li>
                                         <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={500} offset={-95}>About</Link></li>
