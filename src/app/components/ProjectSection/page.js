@@ -12,6 +12,7 @@ const ProjectSection = (props) => {
     }
 
     const [state, setState] = useState({
+        
     })
 
     const [number, setCount] = useState(3);
