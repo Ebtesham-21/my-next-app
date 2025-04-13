@@ -9,6 +9,7 @@ import {
 } from "react-icons/md";
 import { FaBloggerB } from "react-icons/fa";
 import styles from "../ui/dashboard/sidebar/sidebar.module.css";
+import MenuLink from './menuLink/menuLink';
 
 const menuItems = [
     {
@@ -64,17 +65,32 @@ const menuItems = [
 const sidebar = () => {
   return (
     <div className={styles.container}>
-        {menuItems.map(cat=>(
+        
+            <div className={styles.container}>
+                <div className={styles.user}>
+                    <Image src="" alt="" width="50" height="50" />
+
+                    
+
+                </div>
+
+            </div>
             <ul>
                 {menuItems.map(cat => (
                     <li key={cat.title}>
-                        {cat.title}
+                        <span className={styles.cat}>
+                            {cat.title}
+                        
+                        </span>  
+                        {cat.list.map(item=> (
+                            <MenuLink item={item} key={item.title}/>
+                        ))}
 
                     </li>
                 ))}
             </ul>
 
-    ))}
+    
     </div>
   )
 }
