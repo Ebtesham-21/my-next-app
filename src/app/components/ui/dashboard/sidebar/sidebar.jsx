@@ -1,4 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {
+    MdDashboard,
+    MdSupervisedUserCircle,
+    MdShoppingBag,
+
+} from "react-icons/md";
 import styles from "../ui/dashboard/sidebar/sidebar.module.css";
 
 const menuItems = [
@@ -9,19 +15,19 @@ const menuItems = [
                 title: "Dashboard",
                 path: "/dashboard",
                 icon: <MdDashboard/>,
-            }
+            },
             {
                 title: "Users",
                 path: "/dashboard/users",
                 icon: <MdSupervisedUserCircle/>,
-            }
+            },
             {
                 title: "Dashboard",
                 path: "/dashboard/products",
                 icon: <MdShoppingBag/>,
-            }
-        ]
-    }
+            },
+        ],
+    },
 ]
 
 const sidebar = () => {
