@@ -1,10 +1,13 @@
 import React from 'react';
 import {
     MdDashboard,
+    MdHelpCenter,
+    MdOutlineSettings,
     MdSupervisedUserCircle,
-    MdShoppingBag,
+  
 
 } from "react-icons/md";
+import { FaBloggerB } from "react-icons/fa";
 import styles from "../ui/dashboard/sidebar/sidebar.module.css";
 
 const menuItems = [
@@ -23,16 +26,56 @@ const menuItems = [
             },
             {
                 title: "Dashboard",
-                path: "/dashboard/products",
-                icon: <MdShoppingBag/>,
+                path: "/dashboard/blogs",
+                icon: <FaBloggerB/>,
             },
         ],
     },
+    {   
+        title: "Analytics",
+        list: [
+            {
+                "title": "Revenue",
+                path: "/dashboard/revenue",
+                icon: <MdWork/>,
+            },
+        ],
+
+    },
+
+    {
+        title: "User",
+        list: [
+            {
+                title: "Settings",
+                path: "dashboard/settings",
+                icon: <MdOutlineSettings/>,
+            },
+            {
+                title: "Help",
+                path: "dashboard/help",
+                icon: <MdHelpCenter/>,
+
+            }
+        ]
+    }
 ]
 
 const sidebar = () => {
   return (
-    <div>sidebar</div>
+    <div className={styles.container}>
+        {menuItems.map(cat=>(
+            <ul>
+                {menuItems.map(cat => (
+                    <li key={cat.title}>
+                        {cat.title}
+
+                    </li>
+                ))}
+            </ul>
+
+    ))}
+    </div>
   )
 }
 
