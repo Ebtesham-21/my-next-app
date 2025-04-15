@@ -32,7 +32,7 @@ const Footer = (props) => {
                     </div>
                     <div className='w-full'>
                         <div className='copyright'>
-                            <p>© 2023. All rights reserved by themepresss.</p>
+                            <p>© 2025. All rights reserved by 99explainers.</p>
 
                         </div>
 

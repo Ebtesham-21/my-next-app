@@ -35,10 +35,10 @@ const About = (props) => {
                         <div className='text-center lg:text-left tf-about-text'>
                             <small className='text-lg text-white'>About Me</small>
                             <h2 className='text-3xl font-semibold mt-4 mb-2'>
-                                Welcome to Tonu, Best Software Services
+                                Welcome to My Site, Best Digital Services
                             </h2>
                             <h5 className='text-xl text-white mb-4 '>
-                             I have 8+ years of experience in Software Development to give you better services.
+                             I have 8+ years of experience in Creative Field to give you best outcome.
 
                             </h5>
                             <p className='text-white mb-6'>
