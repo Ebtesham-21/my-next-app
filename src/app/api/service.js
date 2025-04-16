@@ -20,7 +20,7 @@ const Services = [
     {
         Id: '1',
         sImgS:sgImgS1,
-        sTitle: 'Website Design',
+        sTitle: 'Animation',
         description:'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
         des2:'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
         des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
@@ -32,7 +32,7 @@ const Services = [
     {
         Id: '2',
         sImgS:brImgS1,
-        sTitle: 'Mobile App Design',
+        sTitle: 'Web Design',
         description:'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
         des2:'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
         des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
@@ -44,7 +44,7 @@ const Services = [
     {
         Id: '3',
         sImgS:uxImgS1,
-        sTitle: 'Brand Identity',
+        sTitle: 'App Development',
         description:'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
         des2:'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
         des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
@@ -56,7 +56,7 @@ const Services = [
     {
         Id: '4',
         sImgS:dvImgS1,
-        sTitle: 'Market Analysis',
+        sTitle: 'Brand Identity Design',
         description:'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
         des2:'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
         des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
