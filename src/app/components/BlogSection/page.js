@@ -116,6 +116,7 @@ const BlogSection = () => {
             create_at={state.create_at}
             author={state.author} 
             comment={state.comment}
+            description={state.description}
             />
 
         </div>
