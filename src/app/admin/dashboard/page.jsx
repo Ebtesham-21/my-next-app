@@ -1,10 +1,18 @@
 "use client";
-
+import AdminLayout from '@/app/components/Admin/page.js';
 import React, {useEffect, useState} from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'react-hot-toast';
 
 const Dashboard = () => {
     const [blogs, setBlogs] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const blogsPerPage = 4;
+
+    const router = useRouter();
+
+
     useEffect(() => {
         async function fetchBlogs() {
             const res = await fetch('/api/blogs');
@@ -20,6 +28,9 @@ const Dashboard = () => {
                 method: 'DELETE',
             });
             setBlogs(blogs.filter(blog => blog._id !== id));
+            toast.success('Blog deleted successfully!');
+        } else {
+            toast.error('Failed to delete blog!');
         }
     }
 
@@ -32,7 +43,19 @@ const Dashboard = () => {
             }
         }, []);
 
+
+        // pagination  logic
+        const indexOfLastBlog = currentPage * blogsPerPage;
+        const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+        const currentBlogs = blogs.slice(indexOfFirstBlog,  indexOfLastBlog);
+        const totalPages = Math.ceil(blogs.length / blogsPerPage);
+
+        function paginate(pageNumber) {
+            setCurrentPage(pageNumber);
+        }
+
     return (
+    <AdminLayout>
         <div className='p-6'>
             <div className='flex justify-between items-center mb-6'>
                 <h1 className='text-3xl font-bold'>
@@ -62,6 +85,17 @@ const Dashboard = () => {
                             </button>
                         </div>
 
+                        <button
+                            onClick={() => {
+                                localStorage.removeItem('isAdminLoggedIn');
+                                router.push('/admin/login');
+                            }}
+                            className="bg-red-500 text-white px-4 py-2 rounded"
+                        >
+                        Logout
+                        </button>
+
+
 
                     </div>
                 ))}
@@ -69,6 +103,7 @@ const Dashboard = () => {
             </div>
 
         </div>
+    </AdminLayout>
     );
     
 };

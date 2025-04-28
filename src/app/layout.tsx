@@ -6,6 +6,9 @@ import "./styles/font-awesome.min.css";
 import "./styles/animate.css";
 import "./styles/themify-icons.css";
 import "./styles/flaticon.css";
+import {Toaster} from "react-hot-toast";
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
   );
