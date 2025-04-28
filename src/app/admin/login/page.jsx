@@ -34,9 +34,30 @@ const AdminLogin = () => {
 return (
     <div className='h-screen flex items-center justify-center bg-gray-100'>
         <form onSubmit={handleSubmit} className='bg-white p-8 rounded shadow-md space-y-4'>
-            
-
+            <h2 className='text-2xl font-bold'>Admin Login</h2>
+            <input 
+                type="email"
+                placeholder='Email'
+                value={email}
+                onChange= {(e) => setEmail(e.target.value)}
+                className='p-2 border rounded w-full'
+                required
+            />
+            <input 
+                type="password"
+                placeholder='Password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className='p-2 border rounded w-full'
+                required
+            />
+            <button type="submit" className="bg-blue-600 text-white w-full py-2 rounded">
+                Login
+            </button>
         </form>
 
     </div>
-)
+);
+};
+
+export default AdminLogin;
