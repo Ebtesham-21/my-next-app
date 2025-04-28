@@ -1,9 +1,10 @@
 'use client';
 import React, {useState} from 'react';
+import axios from 'axios';
 import {useRouter} from 'next/navigation';
 
 const AddBlog = () => {
-    const [formData, setFormData] = useState({
+    const [formDataState, setFormData] = useState({
         title: '',
         description: '',
         author: '',
@@ -14,6 +15,8 @@ const AddBlog = () => {
         thumb: '',
     });
 
+
+
     const router = useRouter();
 
     function handleChange(e) {
@@ -21,6 +24,29 @@ const AddBlog = () => {
             ...formData, [e.target.name]: e.target.value
         });
     }
+
+    async function handleImageUploadScreens(e) {
+        const file = e.target.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const res = await axios.post('/api/upload', formData);
+        setFormData({...formData, screens: res.data.secure_url});
+
+
+    }
+
+
+    async function handleImageUploadSingle(e) {
+        const file = e.target.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const res = await axios.post('/api/upload', formData);
+        setFormData({...formDataState, blogSingleImg: res.data.secure_url});
+    }
+
+
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -51,8 +77,9 @@ const AddBlog = () => {
                 <input type="text" name="create_at" placeholder="Date (e.g., 25 Apr, 2025)" onChange={handleChange} required className="p-2 border rounded" />
                 <input type="text" name="comment" placeholder="Comment Count" onChange={handleChange} required className="p-2 border rounded" />
                 <input type="text" name="thumb" placeholder="Category / Thumb" onChange={handleChange} required className="p-2 border rounded" />
-                <input type="url" name="screens" placeholder="Screens Image URL (Cloudinary)" onChange={handleChange} required className="p-2 border rounded" />
-                <input type="url" name="blogSingleImg" placeholder="Single Blog Image URL (Cloudinary)" onChange={handleChange} required className="p-2 border rounded" />
+                <input type="file" name="screens" accept="image/*" onChange={handleImageUploadScreens} className="p-2 border rounded" />
+                <input type="file" name="blogSingleImg" accept="image/*" onChange={handleImageUploadSingle} className="p-2 border rounded" />
+
 
 
                 <button type="submit" className='bg-green-600 text-white px-4 py-2 rounded'>
