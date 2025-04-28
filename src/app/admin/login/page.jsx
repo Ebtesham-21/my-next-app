@@ -29,7 +29,18 @@ const AdminLogin = () => {
     } else {
         alert('Invalid credentials');
     }
+
+     useEffect(() => {
+            if (typeof window !== 'undefined') {
+                const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
+                if(!isLoggedIn) {
+                    router.push('/admin/login');
+                }
+            }
+        }, []);
 };
+
+
 
 return (
     <div className='h-screen flex items-center justify-center bg-gray-100'>

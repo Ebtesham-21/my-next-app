@@ -23,6 +23,15 @@ const Dashboard = () => {
         }
     }
 
+     useEffect(() => {
+            if (typeof window !== 'undefined') {
+                const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
+                if(!isLoggedIn) {
+                    router.push('/admin/login');
+                }
+            }
+        }, []);
+
     return (
         <div className='p-6'>
             <div className='flex justify-between items-center mb-6'>

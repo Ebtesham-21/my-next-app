@@ -55,6 +55,15 @@ const EditBlog = () => {
 
     if(!formData) return <div className='p-6' > Loading...</div>;
 
+     useEffect(() => {
+            if (typeof window !== 'undefined') {
+                const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
+                if(!isLoggedIn) {
+                    router.push('/admin/login');
+                }
+            }
+        }, []);
+
     return (
         <div className="p-6">
           <h1 className="text-2xl font-bold mb-6">Edit Blog</h1>

@@ -1,5 +1,5 @@
 'use client';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useRouter} from 'next/navigation';
 
@@ -62,6 +62,15 @@ const AddBlog = () => {
             
         
     }
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
+            if(!isLoggedIn) {
+                router.push('/admin/login');
+            }
+        }
+    }, []);
 
     return (
         <div className='p-6'>
