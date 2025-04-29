@@ -43,8 +43,8 @@ const AdminLogin = () => {
 
 
 return (
-    <div className='h-screen flex items-center justify-center bg-gray-100'>
-        <form onSubmit={handleSubmit} className='bg-white p-8 rounded shadow-md space-y-4'>
+    <div className='h-screen flex items-center justify-center bg-black'>
+        <form onSubmit={handleSubmit} className=' p-8 rounded shadow-md space-y-4'>
             <h2 className='text-2xl font-bold'>Admin Login</h2>
             <input 
                 type="email"
