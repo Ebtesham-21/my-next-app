@@ -23,15 +23,15 @@ const AdminLayout = ({children}) => {
 
 
     return (
-        <div className='min-h-screen flex bg-gray-100'>
+        <div className=' flex bg-[#090909] min-h-screen text-white'>
             {/* sidebar */}
-            <div className='w-64 bg-white shadow-md p-6 space-y-6'>
+            <div className='w-64 bg-[#090909] min-h-screen  text-white shadow-md pt-16 px-8 space-y-6'>
                 <h2 className='text-2xl font-bold'>Admin Panel</h2>
                 <nav className='space-y-4'>
-                    <Link href="/admin/dashboard" className='block text-gray-700 hover:text-blue-600'>
+                    <Link href="/admin/dashboard" className='block text-white hover:text-blue-600'>
                         Dashboard
                     </Link>
-                    <Link href="/admin/add-blog" className='block text-gray-700 hover:text-blue-600'>
+                    <Link href="/admin/add-blog" className='block text-white hover:text-blue-600'>
                         Add Blog
                     </Link>
                     {/* <Link href="/admin/dashboard" className='block text-gray-700 hover:text-blue-600'>
