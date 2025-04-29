@@ -15,7 +15,7 @@ export async function POST(req){
     if(!file) return NextResponse.json({error: 'No file provided'}, {status: 400});
 
     const arrayBuffer = await file.arrayBuffer();
-    const buffer = Buffer.form(arrayBuffer);
+    const buffer = Buffer.from(arrayBuffer);
 
     const result = await new Promise((resolve, reject) => {
         cloudinary.uploader.upload_stream({folder: 'blogs'}, (error, result) => {
