@@ -30,14 +30,7 @@ const AdminLogin = () => {
         alert('Invalid credentials');
     }
 
-     useEffect(() => {
-            if (typeof window !== 'undefined') {
-                const isLoggedIn = localStorage.getItem('isAdminLoggedIn');
-                if(!isLoggedIn) {
-                    router.push('/admin/login');
-                }
-            }
-        }, []);
+     
 };
 
 
