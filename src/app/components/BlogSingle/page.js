@@ -128,7 +128,12 @@ const BlogSingle = ({
                                             <ul className='inline-flex gap-3 text-gray-700'>
                                                 {socials.map((platform, i) => (
                                                     <li key={i}>
-                                                        
+                                                        <Link href={platform.href}>
+                                                            <i className={platform.icon} >
+
+                                                            </i>
+                                                        </Link>
+
                                                     </li>
                                                 ))}
 
@@ -136,6 +141,59 @@ const BlogSingle = ({
                                         </div>
                                     )}
                                 </div>
+
+                                {/* Author Box */}
+                                <div className='author-box flex items-center space-x-4 border-t pt-4'>
+                                    { authorImg && (
+                                        <div className='w-16 h-16'>
+                                            <Image 
+                                                src={authorImg}
+                                                alt="author"
+                                                width={64}
+                                                height={64}
+                                                className='rounded-full object-cover'
+                                            />
+
+                                        </div>
+                                    ) }
+
+                                    <div>
+                                        <p className='font-semibold'>
+
+                                            Author: {author}
+
+                                        </p>
+
+                                        <p className='text-sm text-gray-600'>
+                                            {authorBio}
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                {/* comments */}
+                                <div className='comments-area mt-6 border-t pt-4'>
+                                    <h3 className='text-lg font-semibold mb-3'>
+                                        Comments ({comments.length})
+                                    </h3>
+                                    {
+                                        comments.map((cmt, i) => (
+                                            <div key={i} className='mb-4'>
+                                                <p className='font-semibold'>{cmt.name} 
+                                                    <span className='text-gray-500 text-sm'>
+                                                    - {cmt.date}
+                                                    </span>
+                                                </p>
+                                                <p className='text-sm'>
+                                                    {cmt.message}
+                                                </p>
+                                            </div>
+                                        ))
+                                    }
+
+                                    
+                                </div>
+
                             </div>
 
                         </div>
