@@ -5,7 +5,7 @@ const nextConfig = {
       styledComponents: true,
     },
     images: {
-      domains: ['res.cloudinary.com'], // ✅ Allow Cloudinary images
+      domains: ['res.cloudinary.com'], 
     },
   };
   
