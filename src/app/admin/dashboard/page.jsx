@@ -59,11 +59,11 @@ const Dashboard = () => {
 
   return (
     <AdminLayout>
-      <div className="p-6">
+      <div className="p-6  bg-[#090909] min-h-screen text-white" >
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Admin Dashboard</h1>
           <div className="flex gap-4">
-            <Link href="/admin/add-blog" className="bg-blue-600 text-white px-4 py-2 rounded">
+            <Link href="/admin/add-blog" className="bg-[#F97316] text-white px-4 py-2 rounded">
               Add New Blog
             </Link>
             <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 rounded">

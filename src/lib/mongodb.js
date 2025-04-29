@@ -6,7 +6,7 @@ if (!MONGODB_URI) throw new Error("Please define the MONGODB_URI environment var
 
 let cached = global.mongoose || {conn: null, promise: null};
 
-async function dbConnect() {
+export async function dbConnect() {
     if (cached.conn) return cached.conn;
 
     if(!cached.promise) {
@@ -19,4 +19,3 @@ async function dbConnect() {
     return cached.conn;
 }
 
-export default dbConnect;
