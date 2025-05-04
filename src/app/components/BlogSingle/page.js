@@ -8,7 +8,7 @@ import {Dialog, Grid} from '@mui/material';
 const BlogSingle = ({
     open,
     onClose,
-    maxWidth : 'md',
+    maxWidth = 'md',
     title,
     bImg,
     description,
@@ -16,11 +16,11 @@ const BlogSingle = ({
     author,
     authorImg,
     authorBio,
-    gallery : [],
-    tags : [],
-    socials : [],
-    comment: 0,
-    comments: [],
+    gallery = [],
+    tags = [],
+    socials = [],
+    comment= 0,
+    comments= [],
 }) => {
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -191,7 +191,27 @@ const BlogSingle = ({
                                         ))
                                     }
 
-                                    
+
+                                    {/* Comment form */}
+                                    <form onSubmit={SubmitHandler} className='space-y-3 mt-4'>
+                                        <textarea placeholder='Write your comment...' className='w-full border rounded p-2'/>
+
+                                        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
+                                            <input type="url" placeholder="Website" className="border rounded p-2" />
+                                            <input type="text" placeholder="Name" className="border rounded p-2" />
+                                            <input type="email" placeholder="Email" className="border rounded p-2" />
+
+
+                                        </div>
+
+                                        <button type="submit" className='bg-blue-600 text-white px-4 py-2 rounded'>
+                                            Post Comment
+                                        </button>
+
+
+                                    </form>
+
+
                                 </div>
 
                             </div>
@@ -202,5 +222,7 @@ const BlogSingle = ({
                 </Grid>
             </Dialog> 
         </>
-    )
-}
+    );
+};
+
+export default BlogSingle;
