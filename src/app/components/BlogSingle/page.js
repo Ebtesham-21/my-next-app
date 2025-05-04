@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React , {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Dialog, Grid} from '@mui/material';
@@ -9,6 +9,7 @@ const BlogSingle = ({
     open,
     onClose,
     maxWidth = 'md',
+    blogId,
     title,
     bImg,
     description,
@@ -22,9 +23,48 @@ const BlogSingle = ({
     comment= 0,
     comments= [],
 }) => {
-    const SubmitHandler = (e) => {
-        e.preventDefault()
-    };
+    const SubmitHandler = async (e) => {
+        e.preventDefault();
+      
+        if (!commentName || !commentEmail || !commentMessage) {
+          alert("Please fill in all fields.");
+          return;
+        }
+      
+        try {
+            const response = await fetch('/api/blogs/addComment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                blogId,
+                name: commentName,
+                email: commentEmail,
+                message: commentMessage,
+              }),
+            });
+        
+            const data = await response.json();
+        
+            if (response.ok) {
+              alert("Comment posted!");
+              setCommentName('');
+              setCommentEmail('');
+              setCommentMessage('');
+            } else {
+              alert("Error: " + data.error);
+            }
+          } catch (err) {
+            console.error(err);
+            alert("Something went wrong.");
+          }
+        };
+      
+      
+
+
+    const [commentName, setCommentName] = useState('');
+    const [commentEmail, setCommentEmail] = useState('');
+    const [commentMessage, setCommentMessage] = useState('');
 
     return (
         <>
@@ -34,7 +74,7 @@ const BlogSingle = ({
             className='modalWrapper quickview-dialog'
             maxWidth={maxWidth}
            >
-                <Grid className='modalBody modal-body relative bg-white p-6 rounded-lg'>
+                <Grid className='modalBody modal-body relative  p-6 rounded-lg'>
                     <button className='modal-close absolute right-3 top-3 text-gray-500 hover:text-red-600'
                     onClick={onClose}
                     >
@@ -194,12 +234,23 @@ const BlogSingle = ({
 
                                     {/* Comment form */}
                                     <form onSubmit={SubmitHandler} className='space-y-3 mt-4'>
-                                        <textarea placeholder='Write your comment...' className='w-full border rounded p-2'/>
+                                        <textarea placeholder='Write your comment...' 
+                                        
+                                        className='w-full border rounded p-2'
+                                        value={commentMessage}
+                                        onChange = {(e) => setCommentMessage(e.target.value)}
+                                        />
 
-                                        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
-                                            <input type="url" placeholder="Website" className="border rounded p-2" />
-                                            <input type="text" placeholder="Name" className="border rounded p-2" />
-                                            <input type="email" placeholder="Email" className="border rounded p-2" />
+                                        <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+                                          
+                                            <input type="text" placeholder="Name" className="border rounded p-2" 
+                                            value={commentName}
+                                            onChange={(e) => setCommentName(e.target.value)}
+                                            />
+                                            <input type="email" placeholder="Email" className="border rounded p-2" 
+                                            value={commentEmail}
+                                            onChange={(e) => setCommentEmail(e.target.value)}
+                                            />
 
 
                                         </div>

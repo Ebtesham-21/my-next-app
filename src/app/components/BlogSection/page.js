@@ -111,12 +111,19 @@ const BlogSection = () => {
             <BlogSingle 
             open={open} 
             onClose={handleClose} 
-            title={state.title} 
-            bImg={state.blogSingleImg} 
-            create_at={state.create_at}
-            author={state.author} 
-            comment={state.comment}
-            description={state.description}
+            blogId={blogs._id} 
+            title={blogs.title}
+            bImg={blogs.bImg}
+            description={blogs.description}
+            create_at={blogs.create_at}
+            author={blogs.author}
+            authorImg={blogs.authorImg}
+            authorBio={blogs.authorBio}
+            gallery={blogs.gallery}
+            tags={blogs.tags}
+            socials={blogs.socials}
+            comment={blogs.comment}
+            comments={blogs.comments}
             />
 
         </div>

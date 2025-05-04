@@ -1,14 +1,25 @@
-import mongoose from "mongoose";
+// models/Blog.js
+import mongoose from 'mongoose';
+
+const commentSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true },
+  date: { type: Date, default: Date.now },
+});
 
 const blogSchema = new mongoose.Schema({
-    title: String,
-    description: String,
-    author: String,
-    create_at: String,
-    comment: String,
-    screens: String,
-    blogSingleImg: String,
-    thumb: String,
-}, { timestamps: true });
+  title: String,
+  bImg: String,
+  description: String,
+  create_at: String,
+  author: String,
+  authorImg: String,
+  authorBio: String,
+  gallery: [String],
+  tags: [String],
+  socials: [{ href: String, icon: String }],
+  comments: [commentSchema],
+});
 
-export default mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+export default mongoose.models.Blog || mongoose.model('Blog', blogSchema);
