@@ -109,22 +109,23 @@ const BlogSection = () => {
 
             </div>
             <BlogSingle 
-            open={open} 
-            onClose={handleClose} 
-            blogId={blogs._id} 
-            title={blogs.title}
-            bImg={blogs.bImg}
-            description={blogs.description}
-            create_at={blogs.create_at}
-            author={blogs.author}
-            authorImg={blogs.authorImg}
-            authorBio={blogs.authorBio}
-            gallery={blogs.gallery}
-            tags={blogs.tags}
-            socials={blogs.socials}
-            comment={blogs.comment}
-            comments={blogs.comments}
-            />
+  open={open} 
+  onClose={handleClose} 
+  blogId={state._id} 
+  title={state.title}
+  bImg={state.bImg}
+  description={state.description}
+  create_at={state.create_at}
+  author={state.author}
+  authorImg={state.authorImg}
+  authorBio={state.authorBio}
+  gallery={state.gallery}
+  tags={state.tags}
+  socials={state.socials}
+  comment={state.comment}
+  comments={state.comments}
+/>
+
 
         </div>
     </section>

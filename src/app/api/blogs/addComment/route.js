@@ -1,23 +1,39 @@
-import { dbConnect } from '@/lib/mongodb';
-import Blog from '@/models/Blog';
-import mongoose from 'mongoose';
+import { NextResponse } from "next/server";
+import { dbConnect } from "@/lib/mongodb";
+
+import Blog from "@/models/Blog"; 
 
 export async function POST(req) {
-    try {
-        const body = await req.json();
-        console.log('Received body:', body);
+  try {
+    await dbConnect();
 
-        const { blogId, name, email, comment } = body;
-        console.log('Destructured fields:', { blogId, name, email, comment });
+    const body = await req.json();
+    const { blogId, name, email, comment } = body;
 
-        // Check if any field is missing
-        if (!blogId || !name || !email || !comment) {
-            return new Response(JSON.stringify({ error: "Missing fields" }), { status: 400 });
-        }
-
-        // The rest of your code follows...
-    } catch (error) {
-        console.error(error);
-        return new Response(JSON.stringify({ error: "Internal server error" }), { status: 500 });
+    if (!blogId || !name || !email || !comment) {
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
+
+    const blog = await Blog.findById(blogId);
+
+    if (!blog) {
+      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+    }
+
+    // Push the new comment into the comments array
+    blog.comments.push({
+      blogId,  
+      name,
+      email,
+      message: comment,
+    });
+
+    await blog.save();
+
+    return NextResponse.json({ message: "Comment added successfully" }, { status: 201 });
+
+  } catch (error) {
+    console.error("Error adding comment:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }

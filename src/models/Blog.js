@@ -1,4 +1,3 @@
-// models/Blog.js
 import mongoose from 'mongoose';
 
 const commentSchema = new mongoose.Schema({
@@ -19,7 +18,7 @@ const blogSchema = new mongoose.Schema({
   gallery: [String],
   tags: [String],
   socials: [{ href: String, icon: String }],
-  comments: [commentSchema],
+  comments: [commentSchema], // Embedded comment schema
 });
 
 export default mongoose.models.Blog || mongoose.model('Blog', blogSchema);
