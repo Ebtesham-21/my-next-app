@@ -11,6 +11,7 @@ export async function DELETE(req) {
         if (!blog) return NextResponse.json({message: "Blog not found"}, {status: 404});
 
         blog.comments = blog.comments.filter(c => c._id.toString() !== commentId);
+        blog.comment = blog.comments.length;
         await blog.save();
 
         return NextResponse.json({message: "Comment deleted sucessfully"});

@@ -8,13 +8,23 @@ const ViewCommentsPage = () => {
     const [blog, setBlog] = useState(null);
 
     useEffect(() => {
-        const fetchBlog = async = () => {
+        const fetchBlog = async  () => {
+           try {
             const res = await fetch(`/api/blogs/${id}`);
+            if(!res.ok) {
+                throw new Error(`Error: ${res.status}`);
+            }
             const data = await res.json();
             setBlog(data);
-        }; 
+           } catch (error) {
+            console.error("Failed to fetch blog:", error);
+           }
+    }; 
+    if (id) {
         fetchBlog();
-    }, [id]);
+    }
+}, [id]
+);
 
     const handleDeleteComment = async (commentId) => {
         const res = await fetch('/api/blogs/deleteComment', {
