@@ -37,6 +37,10 @@ const AdminLayout = ({children}) => {
                     {/* <Link href="/admin/dashboard" className='block text-gray-700 hover:text-blue-600'>
                         Logout
                     </Link> */}
+                    <Link href="/admin/view-comments/your-blog-id" className='block text-white hover:text-blue-600'>
+                    View Comments
+                    </Link>
+
 
                 </nav>
 
