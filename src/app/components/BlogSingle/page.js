@@ -148,7 +148,7 @@ const BlogSingle = ({
                   <h3 className="text-lg font-semibold mb-3">Comments ({comments.length})</h3>
                   {comments.map((cmt, i) => (
                     <div key={i} className="mb-4">
-                      <p className="font-semibold">{cmt.name}<span className="text-gray-500 text-sm"> - {cmt.date}</span></p>
+                      <p className="font-semibold">{cmt.name}<span className="text-gray-500 text-sm"> -  {cmt.date.slice(0, 19).replace('T', ' TIME ')}</span></p>
                       <p className="text-sm">{cmt.message}</p>
                     </div>
                   ))}

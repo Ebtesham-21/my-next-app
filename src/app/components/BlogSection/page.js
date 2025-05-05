@@ -53,16 +53,15 @@ const BlogSection = () => {
                                 <div className='tp-blog-item'>
                                     <div className='tp-blog-item'>
                                         <div className='tp-blog-img'>
-                                            {blog.screens && (
-                                                <Image 
-                                                    src={blog.screens}
-                                                    alt={blog.title}
-                                                    width={400}
-                                                    height={300}
-                                                    className='w-full h-auto object-cover'
-                                                />
-
-                                            )}
+                                        {blog.gallery?.length > 0 && (
+                                        <Image
+                                            src={blog.gallery[0]}
+                                            alt={blog.title}
+                                            width={400}
+                                            height={300}
+                                            className='w-full h-auto object-cover rounded-md'
+                                        />
+                                        )}
                                             
                                             <div className='thumb'>{blog.thumb}</div>
                                         </div>
