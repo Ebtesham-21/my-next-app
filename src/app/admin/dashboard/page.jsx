@@ -59,11 +59,11 @@ const Dashboard = () => {
 
   return (
     <AdminLayout>
-      <div className="p-6  bg-[#090909] min-h-screen text-white" >
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-          <div className="flex gap-4">
-            <Link href="/admin/add-blog" className="bg-[#F97316] text-white px-4 py-2 rounded">
+      <div className="p-6  sm:p-6 bg-[#090909] min-h-screen text-white" >
+        <div className="flex flex-col sm:flex-grow  justify-between items-start sm:items-center mb-6 gap-4">
+          <h1 className="text-2xl sm:text-3xl font-bold">Admin Dashboard</h1>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <Link href="/admin/add-blog" className="bg-[#F97316] text-white px-4 py-2 rounded text-center">
               Add New Blog
             </Link>
             <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 rounded">
@@ -72,12 +72,12 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid gap-4 sm:gap-6">
           {currentBlogs.map(blog => (
             <div key={blog._id} className="p-4 border rounded shadow">
-              <h2 className="text-xl font-bold">{blog.title}</h2>
-              <p>{blog.author} | {blog.create_at}</p>
-              <div className="flex gap-4 mt-2">
+              <h2 className="text-lg sm:text-xl font-bold">{blog.title}</h2>
+              <p className='text-sm text-gray-400'>{blog.author} | {blog.create_at}</p>
+              <div className="flex flex-row sm:flex-row gap-2 sm:gap-4 mt-3">
                 <Link href={`/admin/edit-blog/${blog._id}`} className="text-blue-600 underline">
                   Edit
                 </Link>
@@ -90,12 +90,12 @@ const Dashboard = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center mt-8 gap-2">
+        <div className="flex flex-wrap justify-center mt-8 gap-2">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-2 rounded text-sm sm:text-base ${
                 currentPage === index + 1 ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border'
               }`}
             >

@@ -46,7 +46,7 @@ const AdminLayout = ({ children }) => {
             Add Blog
           </Link>
 
-          <div>
+          {/* <div>
             <p className='text-sm text-gray-400 mb-1'>View Comments</p>
             {blogs.length > 0 ? (
               blogs.map((blog) => (
@@ -60,7 +60,7 @@ const AdminLayout = ({ children }) => {
             ) : (
               <p className='text-xs text-gray-500 ml-2'>No blogs yet</p>
             )}
-          </div>
+          </div> */}
 
           <button
             onClick={handleLogout}
