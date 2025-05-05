@@ -11,7 +11,7 @@ const BlogSingle = ({
   maxWidth = 'md',
   blogId,
   title,
-  bImg,
+  
   description,
   create_at,
   author,
@@ -83,17 +83,19 @@ const BlogSingle = ({
           <div className="container">
             <div className="tp-blog-content">
               <div className="post format-standard-image">
-                {bImg && (
-                  <div className="entry-media">
-                    <Image
-                      src={bImg}
-                      alt={title}
-                      width={800}
-                      height={400}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                )}
+              {gallery.length > 0 && (
+              <div className='entry-media'>
+                <Image
+                  src={gallery[0]}
+                  alt={title}
+                  width={800}
+                  height={400}
+                  className='w-full h-auto rounded-md object-cover'
+                />
+              </div>
+          )}
+
+
                 <div className="entry-meta">
                   <ul>
                     <li><i className="fi flaticon-user"></i> By <Link href="/">{author}</Link></li>

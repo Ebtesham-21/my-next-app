@@ -10,6 +10,7 @@ const commentSchema = new mongoose.Schema({
 const blogSchema = new mongoose.Schema({
   title: String,
   bImg: String,
+  blogSingleImg: String, 
   description: String,
   create_at: String,
   author: String,
